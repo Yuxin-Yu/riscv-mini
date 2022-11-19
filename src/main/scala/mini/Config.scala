@@ -10,6 +10,7 @@ import peripherals.SevenSegParams
 
 class MiniConfig extends Config((site, here, up) => {
     // Core
+    case ARCH => Seq('i')
     case XLEN => 32
     case FLEN => 32
     case Trace => false
@@ -30,11 +31,12 @@ class MiniConfig extends Config((site, here, up) => {
 
 class CoreConfig extends Config((site, here, up) => {
     // Core
-    case ARCH => Seq('i')
+    case ARCH => Seq('i','m','f')
     case XLEN => 32
     case FLEN => 32
     case Trace => false
     case BuildALU    => (p: Parameters) => Module(new ALUArea()(p))
+    case BuildMALU   => (p: Parameters) => Module(new MALUImplSingleCycleMulOnly()(p))
     case BuildImmGen => (p: Parameters) => Module(new ImmGenWire()(p))
     case BuildBrCond => (p: Parameters) => Module(new BrCondArea()(p))
   }

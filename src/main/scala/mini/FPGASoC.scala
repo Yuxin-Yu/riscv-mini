@@ -129,8 +129,8 @@ class FPGASoC(sim : Boolean = true, memPath: String = "")(implicit val p: Parame
   audioSamples.io.startAddr = 0x30000000L
   audioSamples.io.endAddr = 0x30000400L
   
-  val bootromtext = Module(new MyROM(2048, 1, 32, "BootRomtext", "/home/simon/riscv-mini/bootrom/main.dump.text", 0x00L))   //Starts at address 0
-  val bootromdata = Module(new MyROM(512, 1, 32, "BootRomdata", "/home/simon/riscv-mini/bootrom/main.dump.data", 0x10000L)) //Starts at address 0x10000
+  val bootromtext = Module(new MyROM(2048, 1, 32, "BootRomtext", "/home/yyx/riscv/projects/riscv-mini/bootrom/main.dump.text", 0x00L))   //Starts at address 0
+  val bootromdata = Module(new MyROM(512, 1, 32, "BootRomdata", "/home/yyx/riscv/projects/riscv-mini/bootrom/main.dump.data", 0x10000L)) //Starts at address 0x10000
 
   bootromtext.memLink.startAddr = bootromtext.startAddress
   bootromtext.memLink.endAddr = bootromtext.endAdress

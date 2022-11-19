@@ -116,10 +116,9 @@ $(prjx): $(verilog)
 prjx: $(prjx)
 
 # Clean
-.PHONY: clean
-clean:
-ifneq ($(BOOTROM_DIR),"")
-	$(MAKE) -C $(BOOTROM_DIR) clean
-endif
-	$(MAKE) -C $(FPGA_DIR) clean
-	rm -rf $(BUILD_DIR)
+#.PHONY: clean
+#clean:
+#ifneq ($(BOOTROM_DIR),"")
+#	$(MAKE) -C $(BOOTROM_DIR) clean
+#endif
+#	rm -rf $(BUILD_DIR)

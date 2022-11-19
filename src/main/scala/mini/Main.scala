@@ -9,6 +9,7 @@ import peripherals._
 
 object Main extends App {
   val params = (new MiniConfig).toInstance
+  implicit val p = (new MiniConfig).toInstance
 
   val targetDirectory = args.head
 

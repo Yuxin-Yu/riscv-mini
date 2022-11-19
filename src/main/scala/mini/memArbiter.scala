@@ -46,8 +46,8 @@ class MemArbiterFPGA(peripheries: Seq[MMIOModule], memoryLinks: Seq[MemIO], mems
 
   //Memory modules
   val dmem = Module(new BlockMem(1024, 32))
-  val bootromtext = Module(new rom(2048, 32, "/home/simon/riscv-mini/bootrom/main.dump.text"))
-  val bootromdata = Module(new rom(1024, 32, "/home/simon/riscv-mini/bootrom/main.dump.data"))
+  val bootromtext = Module(new rom(2048, 32, "/home/yyx/riscv/projects/riscv-mini/bootrom/main.dump.text"))
+  val bootromdata = Module(new rom(1024, 32, "/home/yyx/riscv/projects/riscv-mini/bootrom/main.dump.data"))
 
   //Memory mapped modules
   /*val uart = Module(new UART(32000000, 115200))

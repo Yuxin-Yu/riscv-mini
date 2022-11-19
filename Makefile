@@ -10,7 +10,7 @@ BUILD_DIR := $(base_dir)/builds/basys3Build
 FPGA_DIR := $(base_dir)/fpga-shells/xilinx
 MODEL := FPGAChip
 PROJECT := mini.MainBasys3FPGA
-export CONFIG := FPGAConfig
+export CONFIG := MiniConfig
 export BOARD := basys3
 export BOOTROM_DIR := $(base_dir)/bootrom
 
